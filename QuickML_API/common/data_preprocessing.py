@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 from . import global_vars
 
+global_vars = global_vars.global_vars
+
 def print_tab(df : pd.DataFrame, head = False) -> None:
     """prints pandas dataframe in tabular form 
 
