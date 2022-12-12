@@ -4,29 +4,7 @@ from tabulate import tabulate
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
-
-
-global_vars = {
-    "DATASET_FILE_PREFIX" : "C:\\Users\\sapta\\Documents\\git\\DeepLearning\\QuickML_API\\_docs\\dataset\\",
-
-    "split_profile" : {
-        'independent_vars' : ['Country', 'Age', 'Salary'],
-        'dependent_vars' : ['Purchased'],
-        'train_size' : 0.7
-    },
-
-    "impute_strategy" : {
-            'missing_value' : np.nan,
-            'strategy': 'mean'
-    },
-
-    "categorical_cols" : {
-        'independent' : ['Country'],
-        'dependent' : ['Purchased']
-    },
-
-    "debug" : False
-}
+from . import global_vars
 
 def print_tab(df : pd.DataFrame, head = False) -> None:
     """prints pandas dataframe in tabular form 
